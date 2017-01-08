@@ -124,12 +124,11 @@ STATIC_URL = '/static/'
 
 #putting static files in a folder.
 STATICFILES_DIRS = [
-    #will not be served. later storage
     os.path.join(BASE_DIR, "static-storage"),
 ]
 
 #will be served
-STATIC_ROOT = os.path.join(BASE_DIR, "static-serve")
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static-serve")
 
 #later static root will be
 #STATIC_ROOT = "/webapps/abc/static"
